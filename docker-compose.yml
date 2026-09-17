@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: mplads_backend
+    ports:
+      - "8000:8000"
+    volumes:
+     - ./backend/data:/app/data # Persists the SQLite database locally
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: mplads_frontend
+    ports:
+      - "3000:80"  # Access the UI on port 3000 on your friend's device
+    depends_on:
+      - backend
+    restart: always

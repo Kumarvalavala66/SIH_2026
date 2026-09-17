@@ -1,0 +1,156 @@
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #666;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Fits all 6 cards nicely in one row on wide screens */
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.card span {
+  display: block;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card strong {
+  font-size: 30px;
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.high {
+  background: #ffdede;
+}
+
+.badge.medium {
+  background: #fff0c2;
+}
+
+.badge.low {
+  background: #dff5e4;
+}
+
+.error {
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #ffdede;
+  border-radius: 8px;
+}
+.project-row:hover {
+  background-color: #f1f5f9;
+  cursor: pointer;
+}
+
+.project-row.active-row {
+  background-color: #e2e8f0;
+}
+.project-row {
+  cursor: pointer;
+}
+
+.project-row:hover {
+  background-color: #f1f5f9;
+}
+
+.project-row.active-row {
+  background-color: #e2e8f0;
+  font-weight: 500;
+}
+.distribution-panel {
+  margin-bottom: 20px;
+}
+
+.distribution-bar {
+  display: flex;
+  height: 16px;
+  width: 100%;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15px 0 10px 0;
+}
+
+.bar-high {
+  background-color: #ef4444;
+  transition: width 0.3s ease;
+}
+
+.bar-medium {
+  background-color: #f59e0b;
+  transition: width 0.3s ease;
+}
+
+.bar-low {
+  background-color: #10b981;
+  transition: width 0.3s ease;
+}
+
+.distribution-legend {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.legend-dot.high { background-color: #ef4444; }
+.legend-dot.medium { background-color: #f59e0b; }
+.legend-dot.low { background-color: #10b981; }
